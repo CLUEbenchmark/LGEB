@@ -172,9 +172,11 @@ def main():
 
     forbid_ignore_set = _get_token_id_set(args.forbid_ignore_word)
     not_predict_set = _get_token_id_set(args.not_predict_token)
+    print(args.model_recover_path)
     for model_recover_path in glob.glob(args.model_recover_path.strip()):
         logger.info("***** Recover model: %s *****", model_recover_path)
         model_recover = torch.load(model_recover_path, map_location=torch.device('cpu'))
+        print(args.pytorch_pretrained_bert_cache)
         model = BertForSeq2SeqDecoder.from_pretrained(args.bert_model, cache_dir=args.pytorch_pretrained_bert_cache, state_dict=model_recover, num_labels=cls_num_labels, num_rel=pair_num_relation, type_vocab_size=type_vocab_size, task_idx=3, mask_word_id=mask_word_id, search_beam_size=args.beam_size,
                                                       length_penalty=args.length_penalty, eos_id=eos_word_ids, sos_id=sos_word_id, forbid_duplicate_ngrams=args.forbid_duplicate_ngrams, forbid_ignore_set=forbid_ignore_set, not_predict_set=not_predict_set, ngram_size=args.ngram_size, min_len=args.min_len, mode=args.mode, max_position_embeddings=args.max_seq_length, ffn_type=args.ffn_type, num_qkv=args.num_qkv, seg_emb=args.seg_emb, pos_shift=args.pos_shift)
         del model_recover

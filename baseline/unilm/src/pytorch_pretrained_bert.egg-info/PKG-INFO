@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pytorch-pretrained-bert
+Version: 0.4.0
+Summary: PyTorch version of Google AI BERT model with script to load Google pre-trained models
+Home-page: https://github.com/huggingface/pytorch-pretrained-BERT
+Author: Thomas Wolf, Victor Sanh, Tim Rault, Google AI Language Team Authors
+Author-email: thomas@huggingface.co
+License: Apache
+Description: pytorch
+Keywords: BERT NLP deep learning google
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown

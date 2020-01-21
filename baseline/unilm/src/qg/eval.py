@@ -2,17 +2,17 @@
 from __future__ import print_function
 __author__ = 'xinya'
 
-from bleu.bleu import Bleu
-from meteor.meteor import Meteor
-from rouge.rouge import Rouge
-from cider.cider import Cider
+from pycocoevalcap.bleu.bleu import Bleu
+from pycocoevalcap.meteor.meteor import Meteor
+from pycocoevalcap.rouge.rouge import Rouge
+from pycocoevalcap.cider.cider import Cider
 from collections import defaultdict
 from argparse import ArgumentParser
 import string
 
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
 
 _tok_dict = {"(": "-lrb-", ")": "-rrb-",
              "[": "-lsb-", "]": "-rsb-",
@@ -136,6 +136,7 @@ class QGEvalCap:
         # =================================================
         for scorer, method in scorers:
             # print 'computing %s score...'%(scorer.method())
+            #print(self.gts, self.res)
             score, scores = scorer.compute_score(self.gts, self.res)
             if type(method) == list:
                 for sc, scs, m in zip(score, scores, method):

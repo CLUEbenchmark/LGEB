@@ -677,8 +677,10 @@ class PreTrainedBertModel(nn.Module):
             archive_file = PRETRAINED_MODEL_ARCHIVE_MAP[pretrained_model_name]
         else:
             archive_file = pretrained_model_name
+        print("archive_file:", archive_file)
         # redirect to the cache, if necessary
         try:
+            print("cache_dir1", cache_dir)
             resolved_archive_file = cache_dir + "/bert-large-cased.tar.gz"
             #resolved_archive_file = cached_path(
             #    archive_file, cache_dir=cache_dir)
