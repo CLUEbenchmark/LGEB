@@ -5,8 +5,8 @@ LGEB: Benchmark of Language Generation Evaluation
 
 用法：
   1. 首先将数据下载到对应文件夹
-  2. 执行脚本
-  cd LGEB/baseline/unilm/scripts  
+  2. 执行脚本  
+   ```cd LGEB/baseline/unilm/scripts ```  
   训练: ```run_giaword_as.sh``` / ```run_squad_qg.sh```  
   评估: ```run_giaword_as_eval.sh``` / ```run_squad_qg_eval.sh``` 
  
