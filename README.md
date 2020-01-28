@@ -5,7 +5,7 @@ LGEB: Benchmark of Language Generation Evaluation
 
 用法：
   1. 首先将数据下载到对应文件夹  
-  将tmp/data/model/加压到unilm目录下，下载链接如下：   
+  将tmp/data/model/解压到unilm目录下，下载链接如下：   
   ```https://pan.baidu.com/s/1nr9Xet0tx7bCI5UVICX1Pg```
   2. 执行脚本  
    ```cd LGEB/baseline/unilm/scripts ```  
